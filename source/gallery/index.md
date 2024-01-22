@@ -1,10 +1,10 @@
 ---
-title: gallery
+title: "图库"
 date: 2020-10-05 12:00:00
 type: "gallery"
 layout: "gallery"
 ---
 
 <div class="gallery-group-main">
-{% galleryGroup '壁纸' '收藏的一些壁纸' '/photo/wallpaper' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
+{% galleryGroup '二次元风景图' '二次元' '/photo/二次元风景图' ../photo/二次元风景图/assets/index/images/14.jpg %}
 </div>

@@ -1,0 +1,18 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: 涅槃豆の博客
+      link: http://8.140.253.116:80/
+      avatar: http://8.140.253.116/img/avatar.jpg
+      descr: 涅槃豆の博客
+    2:
+      name: 小天使
+      link: http://dyfl.top/
+      avatar: https://liuzhihang.com/upload/logo.png
+      descr: 小天使
+    3:
+      name: 墨白
+      link: https://www.overflows.top/
+      avatar: https://www.overflows.top/style/images/mobai.jpg
+      descr: 墨白
