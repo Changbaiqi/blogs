@@ -150,3 +150,11 @@ service_worker:
   - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
   stripPrefix: public
   verbose: true
+
+# 懒加载
+lazyload:
+  enable: true
+  onlypost: true
+  # loadingImg: /images/loading.png
+  isSPA: false
+  preloadRatio: 3
