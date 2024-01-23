@@ -155,6 +155,6 @@ service_worker:
 lazyload:
   enable: true
   onlypost: true
-  # loadingImg: /images/loading.png
-  isSPA: false
+  loadingImg: /images/loading2.gif
+  isSPA: true
   preloadRatio: 3
