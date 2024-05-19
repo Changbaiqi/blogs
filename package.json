@@ -38,6 +38,6 @@
     "hexo-theme-butterfly": "^4.12.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
-    "katex": "^0.16.9"
+    "katex": "^0.16.10"
   }
 }
