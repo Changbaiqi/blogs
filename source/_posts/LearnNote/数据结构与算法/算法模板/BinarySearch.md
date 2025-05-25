@@ -21,7 +21,7 @@ tags:
 
 ## Java代码模板：
 
-### 整形二分：
+### 整形二分（左闭右闭）：
 
 > ```java
 > //这是一个Java整数二分模板
@@ -46,6 +46,60 @@ tags:
 >     //......
 > }
 > ```
+
+### 整形二分（左闭右开）:
+
+```java
+//这是一个Java整数二分模板
+public static void binarySearch(){
+	//l为二分的左值，r为二分的右值，mid为二分的中间值
+ int l=0,r=100,mid;
+ //这里的l<=r为二分的结束条件
+ while(l<r){
+     //计算二分的mid
+     mid = (l+r)>>1;
+     //这里的check函数主要的作用就是通过已知的必要条件传入check进行综合分析然后判断应该之后的二分是右移还是左移
+     if(check(Object c))
+         l = mid+1; //这里是右移
+     else
+         r = mid; //这里是左移
+ }
+}
+
+
+//这个是check函数，check函数的书写需要结合实际来
+public static void check(Object c){
+ //......
+}
+```
+
+### 整形二分（左开右闭）:
+
+```java
+//这是一个Java整数二分模板
+public static void binarySearch(){
+	//l为二分的左值，r为二分的右值，mid为二分的中间值
+ int l=0,r=100,mid;
+ //这里的l<=r为二分的结束条件
+ while(l<r){
+     //计算二分的mid
+     mid = (l+r+1)>>1;
+     //这里的check函数主要的作用就是通过已知的必要条件传入check进行综合分析然后判断应该之后的二分是右移还是左移
+     if(check(Object c))
+         l = mid; //这里是右移
+     else
+         r = mid-1; //这里是左移
+ }
+}
+
+
+//这个是check函数，check函数的书写需要结合实际来
+public static void check(Object c){
+ //......
+}
+```
+
+
 
 ### 高精度二分：
 
