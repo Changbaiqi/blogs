@@ -298,6 +298,37 @@ Feign集成了Ribbon Ribbon里面集成了eureka
 >     
 > ```
 
+## Feign实现服务调用(重点)
+
+Service层：
+
+```java
+@Component
+@FeignClient(value = "EXAMPLE-SERVICE")
+public interface ExampleService {
+    @GetMapping("/example/openfeign")
+    public String helloworld();
+}
+```
+
+Controller层：
+
+```java
+@RestController
+public class ExampleFeignController {
+
+    @Resource
+    private ExampleService exampleService;
+
+    @GetMapping("/example/openfeign")
+    public String helloworld(){
+        return exampleService.helloworld();
+    }
+}
+```
+
+
+
 ## Spring Cloud Hystrix
 
 什么叫服务雪崩：
