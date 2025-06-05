@@ -20,6 +20,7 @@ window.onload = (function () {
         { name: '*遥', color: MCO['2'], money: '58.88', date: '2025/04/27' },
         { name: 'Venator', color: MCO['2'], money: '52.00', date: '2024/09/11' },
         { name: '*🐵', color: MCO['3'], money: '35.00', date: '2023/11/20' },
+        { name: '我是当地皮鞋', color: MCO['3'], money: '30.00', date: '2025/06/05' },
         { name: '加载中······', color: MCO['4'], money: '20.00', date: '2024/10/08' },
         { name: '*雨', color: MCO['4'], money: '20.00', date: '2024/09/11' },
         { name: '一*c', color: MCO['4'], money: '20.00', date: '2024/05/11' },
