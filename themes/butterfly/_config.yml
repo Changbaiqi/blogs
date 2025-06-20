@@ -507,7 +507,7 @@ math:
 
   katex:
     # Enable the copy KaTeX formula
-    copy_tex: false
+    copy_tex: true
     per_page: false
     hide_scrollbal: true
 
