@@ -298,7 +298,7 @@ synchronized底层是利用计算机系统mutex Lock实现的。每一个可重�
 >
 > Condition依赖于Lock接口，生成一个Condition的基本代码是Lock.newCondition()
 >
-> 调用Condition的await()和signal()方法，都必须在lock保护之内，就是说必须在lock.lock()和lock.unlock之间才可以使用Condition中的await()对应Object的wait()；
+> 调用Condition的await()和signal()方法，都`必须在lock保护之内`，就是说必须在lock.lock()和lock.unlock之间才可以使用Condition中的await()对应Object的wait()；
 >
 > Condition中signal()对应Object的notify();
 >
@@ -307,7 +307,7 @@ synchronized底层是利用计算机系统mutex Lock实现的。每一个可重�
 > | 对比项                                               | Object Monitor Methods        | Condition                                                    |
 > | ---------------------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
 > | 前置条件                                             | 获取对象的锁                  | 调用Lock.lock()获取锁<br>调用Lock.newCondition()获取Condition对象 |
-> | 调用方法                                             | 直接调用<br>如：object.wait() | 直接调用<br>如：condition.awati()                            |
+> | 调用方法                                             | 直接调用<br>如：object.wait() | 直接调用<br>如：condition.await()                            |
 > | 等待队列个数                                         | 一个                          | 多个                                                         |
 > | 当前线程释放锁并进入等待状态                         | 支持                          | 支持                                                         |
 > | 当前线程释放锁并进入等待状态，在等待状态中不响应中断 | 不支持                        | 支持                                                         |
