@@ -861,9 +861,9 @@ beautify:
   # Specify the field to beautify (site or post)
   field: post
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
-  title_prefix_icon:
+  title_prefix_icon: '\f863'
   # Specify the color of the title prefix icon, such as '#F47466'
-  title_prefix_icon_color:
+  title_prefix_icon_color: "#F47466"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work
@@ -1103,6 +1103,8 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
     - <link rel="stylesheet" href="/css/rightMenu.css">
     - <link rel="stylesheet" href="/css/showAppreciation.css">
+    # 风车
+    - <link rel="stylesheet" href="/css/pinwheel.css"> 
   bottom:
     - <script src="https://cdn.staticfile.net/jquery/3.7.1/jquery.min.js"></script> # JQ库
     - <div class="aplayer no-destroy" data-id="9156303892" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>
