@@ -124,3 +124,13 @@ jobs:
 
 
 ![image-20250708154656804](./Hexo+GithubActions+GithubPages自动化部署打包更新博客/images/image-20250708154656804.png)
+
+
+
+## 6 以后更新博客方式
+
+以后你更新博客就不用管那么多了，直接在Hexo的post里面写完文章后直接在博客根目录进行`git`操作即可，接下来的一对繁杂编译部署计划就全权交给`GithubActions`吧
+
+* git add .
+* git commit -m "update: 更新文章"
+* git push origin main
