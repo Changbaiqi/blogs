@@ -36,7 +36,7 @@ tags:
 然后进入文件编写配置文件：
 
 ```yaml
-name: Deploy VitePress to GitHub Pages
+name: Deploy Changbaiqi Blog to GitHub Pages
 
 on:
   push:
