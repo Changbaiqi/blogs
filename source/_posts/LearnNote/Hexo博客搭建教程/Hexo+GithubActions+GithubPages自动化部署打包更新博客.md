@@ -77,7 +77,7 @@ jobs:
       - name: Deploy Blog
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: blog-pages                 # 部署目标分支
+          branch: blog-pages   # 部署目标分支
           folder: public      # 构建后的输出目录
 ```
 

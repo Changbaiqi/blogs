@@ -88,6 +88,24 @@ IGMP(Internet Group Management Protocol，网际组管理协议)允许Internet�
 
 ![img](./TCPIP知识/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RjeTgz,size_16,color_FFFFFF,t_70-1719052418850-15.png)
 
+## 谐音字快速记忆法
+
+乌苏网传会表演：
+
+乌（物理层）
+
+苏（数据链路层）
+
+网（网际层/网络层）
+
+传（传输层）
+
+会（会话层）
+
+表（表示层）
+
+演（谐音字“应”，表示应用层）
+
 
 
 ## 关与路由转发分组
