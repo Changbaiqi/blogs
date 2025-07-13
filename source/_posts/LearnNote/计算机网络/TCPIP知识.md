@@ -88,7 +88,7 @@ IGMP(Internet Group Management Protocol，网际组管理协议)允许Internet�
 
 ![img](./TCPIP知识/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RjeTgz,size_16,color_FFFFFF,t_70-1719052418850-15.png)
 
-## 谐音字快速记忆法
+## 七层模型谐音字快速记忆法
 
 乌苏网传会表演：
 
