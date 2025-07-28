@@ -33,7 +33,11 @@ Anyway，想到一个粗暴但简单的方法来解决这个问题。
 
 将标注`//新增`的两行代码添加进去
 
-```
+
+
+### 1.旧版本Hexo解决办法
+
+```pug
 #loading-box
   .loading-left-bg
   .loading-right-bg
@@ -69,6 +73,57 @@ script(async). //新增
 这两行代码的意思是：
 
 在加载动画时，采用的是异步加载方式。如果超过5秒没有反应，则认为超时。
+
+
+
+### 2.新版本Hexo解决办法
+
+```pug
+#loading-box
+  .loading-left-bg
+  .loading-right-bg
+  .spinner-box
+    .configure-border-1
+      .configure-core
+    .configure-border-2
+      .configure-core
+    .loading-word= _p('loading')
+
+script.
+  (() => {
+    const $loadingBox = document.getElementById('loading-box')
+    const $body = document.body
+    const preloader = {
+      timeoutId: null, // 新加的，用于存计时器
+      endLoading: () => {
+        clearTimeout(preloader.timeoutId) // 新加的，用于清除超时保护
+        $body.style.overflow = ''
+        $loadingBox.classList.add('loaded')
+      },
+      initLoading: () => {
+        $body.style.overflow = 'hidden'
+        $loadingBox.classList.remove('loaded')
+
+        // 新加的，用于设置超时保护，5秒后强制关闭加载动画
+        preloader.timeoutId = setTimeout(() => {
+          preloader.endLoading()
+        }, 5000)
+        
+      }
+    }
+
+    preloader.initLoading()
+    window.addEventListener('load', preloader.endLoading)
+
+    if (!{theme.pjax && theme.pjax.enable}) {
+      btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+      btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+    }
+  })()
+
+```
+
+
 
 
 
