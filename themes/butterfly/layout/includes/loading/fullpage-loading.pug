@@ -8,7 +8,7 @@
       .configure-core
     .loading-word= _p('loading')
 
-script.
+script(async).
   (()=>{
     const $loadingBox = document.getElementById('loading-box')
     const $body = document.body
@@ -25,7 +25,8 @@ script.
 
     preloader.initLoading()
     window.addEventListener('load', preloader.endLoading)
-
+    setTimeout(function(){preloader.endLoading();}, 5000);
+    
     if (!{theme.pjax && theme.pjax.enable}) {
       btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
       btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
