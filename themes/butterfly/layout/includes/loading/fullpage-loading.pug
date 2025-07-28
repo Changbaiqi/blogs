@@ -8,25 +8,32 @@
       .configure-core
     .loading-word= _p('loading')
 
-script(async).
+script.
   (()=>{
     const $loadingBox = document.getElementById('loading-box')
     const $body = document.body
     const preloader = {
+      timeoutId: null,
       endLoading: () => {
+        clearTimeout(preloader.timeoutId) // 清除超时保护
         $body.style.overflow = ''
         $loadingBox.classList.add('loaded')
       },
       initLoading: () => {
         $body.style.overflow = 'hidden'
         $loadingBox.classList.remove('loaded')
+
+        // 设置超时保护，5秒后强制关闭加载动画
+        preloader.timeoutId = setTimeout(() => {
+          preloader.endLoading()
+        }, 5000)
+
       }
     }
 
     preloader.initLoading()
     window.addEventListener('load', preloader.endLoading)
-    setTimeout(function(){preloader.endLoading();}, 5000);
-    
+
     if (!{theme.pjax && theme.pjax.enable}) {
       btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
       btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
