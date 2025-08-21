@@ -134,6 +134,15 @@ The ExtendedSSLSession object can be retrieved by calling the SSLSocket.getHands
 The X509TrustManager interface is not connection-sensitive. It provides no way to access SSLSocket or SSLEngine session properties.
 
 Besides TLS 1.2 support, the X509ExtendedTrustManager class also supports algorithm constraints and SSL layer host name verification. For JSSE providers and trust manager implementations, the X509ExtendedTrustManager class is highly recommended over the legacy X509TrustManager interface.
+
+
+Creating an X509ExtendedTrustManager
+You can either create an X509ExtendedTrustManager subclass yourself (which is outlined in the following section) or obtain one from a provider-based TrustManagerFactory (such as that supplied by the SunJSSE provider). In Java SE 7, the PKIX or SunX509 TrustManagerFactory returns an X509ExtendedTrustManager instance.
+
+Creating Your Own X509ExtendedTrustManager
+This section outlines how to create a subclass of X509ExtendedTrustManager in nearly the same way as described for X509TrustManager.
+
+The following example illustrates how to create a class that uses the PKIX TrustManagerFactory to locate a default X509ExtendedTrustManager that will be used to make decisions about trust. If the default trust manager fails for any reason, then the subclass is can add other behavior. In the example, these locations are indicated by comments in the catch clauses.
 ```
 
 所以正确做法是正确的解决方案应该是实现[X509ExtendedTrustManager](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#X509ExtendedTrustManager)
