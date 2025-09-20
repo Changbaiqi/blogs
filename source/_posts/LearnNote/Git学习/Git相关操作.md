@@ -250,7 +250,24 @@ git merge dev
 > git branch #查看当前分支
 > ```
 >
-> 
+
+如果合并时候发生冲突你想只保留当前分支版本可以再继续用以下指令：
+
+```shell
+git chekout --ours <文件路径> #只针对一个文件
+git checkout --ours . #针对所有
+```
+
+如果合并时候发生冲突你想只保留合并进来的分支版本可以再继续用以下指令：
+
+```shell
+git chekout --theirs <文件路径> #只针对一个文件
+git checkout --theirs . #针对所有
+```
+
+解决冲突过后即可使用`add`标记冲突以解决，并使用`commit`指令继续合并
+
+
 
 ### 修改分支名称（重命名分支名称）
 
