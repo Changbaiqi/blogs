@@ -25,14 +25,14 @@ pip install ultralytics
 
 使用conda的话
 
-```
+```shell
 conda create -n yolov12 python=3.11
 conda activate yolov12
 ```
 
 
 
-下载好依赖后可以先尝试
+下载好依赖后可以先尝试，以下代码来自官方文档[使用 Ultralytics YOLO 进行模型训练 - Ultralytics YOLO 文档](https://docs.ultralytics.com/zh/modes/train/)
 
 ```python
 from ultralytics import YOLO
@@ -222,6 +222,8 @@ yolo训练模型有个好处就是每次一轮训练就会进行保存，所以�
 其中`weights`里面便是训练好的模型，其中`best.pt`指的是训练效果或者说正确率最高的模型，`last.pt`则是最后一次训练轮数的模型，这些模型是可以直接在yolo加载使用的，一般来说我们都会选择`best.pt`模型。
 
 ![image-20250930183609099](./利用YOLO进行目标识别训练/images/image-20250930183609099.png)
+
+如果嫌训练慢的话可以使用算力平台进行，比如[AutoDL算力云 | 弹性、好用、省钱，GPU算力零售价格新标杆](https://www.autodl.com/home)
 
 ## 5 测试模型
 
