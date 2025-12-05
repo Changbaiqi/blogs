@@ -34,6 +34,7 @@ window.onload = (function () {
         { name: '***焕', color: MCO['4'], money: '16.66', date: '2024/09/11' },
         { name: 'Yong', color: MCO['4'], money: '15.00', date: '2025/04/24' },
         { name: '清心寡欲', color: MCO['4'], money: '12.00', date: '2024/05/08' },
+        { name: '**臣', color: MCO['4'], money: '10.00', date: '2025/12/05' },
         { name: '*水', color: MCO['4'], money: '10.00', date: '2025/10/30' },
         { name: '2*9', color: MCO['4'], money: '10.00', date: '2025/06/18' },
         { name: '*水', color: MCO['4'], money: '10.00', date: '2025/05/20' },
