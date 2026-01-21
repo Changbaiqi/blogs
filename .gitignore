@@ -11,4 +11,3 @@ public/
 _multiconfig.yml
 # 忽略对应笔记文件的git
 source/_posts/*/.git
-deploy.bat
