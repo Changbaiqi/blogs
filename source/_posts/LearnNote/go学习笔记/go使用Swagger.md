@@ -162,3 +162,21 @@ func GetPostById(c *gin.Context) {
 1. 运行 `swag init` 生成文档。
 2. 启动项目：`go run main.go`。
 3. 在浏览器中访问`http://localhost:8080/swagger/index.html`，即可查看交互式 API 文档。
+
+
+
+## 5 参数说明
+
+* @Summary：接口简述
+
+* @Produce：返回的 MIME 类型
+
+* @Param：参数定义（格式：名称 位置 类型 是否必填 描述）
+
+* @Success：成功响应（格式：状态码 {类型} 数据结构 描述）
+
+* @Failure：失败响应
+
+* @Router：路由路径和方法
+
+* @Tags:给swagger进行分组

@@ -19,7 +19,6 @@ tags:
 根据配置创建不同实现：例如存储（内存/文件/S3）、AI provider（OpenAI/豆包/DeepSeek）等。
 
 ### 代码
-
 ```go
 package factory
 

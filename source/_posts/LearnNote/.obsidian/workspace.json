@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "2e1542d39b5409a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff3a9be6dbf75807",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7de0bff23e9b6625",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git学习/Git相关操作.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git相关操作"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "75924882efa8a3b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfadff4054739294",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c05f739d765ae75e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "cbd557668542adb5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "go学习笔记/go设计模式.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "go设计模式 的大纲"
+            }
+          },
+          {
+            "id": "27729f4ef2a1567b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "lfs",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4b88f4803b2e0b11",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "e99aaa8d14e3b320",
+    "type": "split",
+    "children": [
+      {
+        "id": "8215b98313fe3af1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e42403d766798eb4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "f0ff0bb428ae50ca",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "cb3c7b872536546a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "8aed73f4dea0fe32",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "10e504385dd5311a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "7de0bff23e9b6625",
+  "lastOpenFiles": [
+    "go学习笔记/go设计模式.md",
+    "go学习笔记/Gin学习.md",
+    "go学习笔记/关于GO快速进行后端代码模块划分.md",
+    "go学习笔记/go使用Swagger.md",
+    "go学习笔记/GO项目模块划分.md",
+    "Git学习/Git相关操作.md",
+    "其他/好用工具集合.md",
+    "计算机网络/GFW原理和封锁技术.md",
+    "2026-01-04.md",
+    "未命名 1.base",
+    "未命名 3.base",
+    "未命名.canvas",
+    "佛祖模板/README.md",
+    "未命名 4.base",
+    "未命名 2.base",
+    "未命名.base"
+  ]
+}
