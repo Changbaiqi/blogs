@@ -167,7 +167,7 @@ git checkout -- 文件名称
 
 
 
-### 绑定远程仓库
+### SSH绑定远程仓库
 
 第一步：
 
@@ -342,36 +342,55 @@ git pull origin master
 
 
 
+#### 在merge状态下如何取消
+
+![image-20260207155338275](./Git相关操作/images/image-20260207155338275-1770450822761-1.png)
+
+使用以下指令即可：
+
+```shell
+git merge --abort
+```
+
+##### 作用
+
+- **彻底取消本次 merge**
+- 工作区、暂存区都会恢复到 **merge 之前的状态**
+- `(MERGING)` 会立刻消失
+
+
+
 ## 3 LFS大文件存储使用
+
 有时候github等平台默认最大的单文件大小限制是`100MB`这个时候假如我们一些开发静态文件等比如so等文件需要推送到仓库那么久需要使用`LFS`管理了。
 Git LFS为了解决大文件托管的效率问题，提供了五大特性：
 - **更大**：支持GB级别的大文件版本控制。
-    
+  
 - **更小**：让Git仓库空间占用减小。
-    
+  
 - **更快**：仓库的克隆和拉取更快。
-    
+  
 - **透明**：Git使用上对用户完全透明。
-    
+  
 - **兼容**：权限控制上完全兼容（兼容Codeup权限控制）。
 
 ### 3.1 下载和Git LFS
 - 下载：
-    
+  
     - Linux Debian和RPM packages：[https://packagecloud.io/github/git-lfs/install](https://packagecloud.io/github/git-lfs/install)。
-        
+      
     - Mac：使用`brew install git-lfs`。
-        
+      
     - Windows：目前lfs已经集成在了[Git for Windows](https://gitforwindows.org/) 中，直接下载和使用最新版本的Windows Git即可。
-        
+      
     - 直接下载二进制包：[https://github.com/git-lfs/git-lfs/releases](https://github.com/git-lfs/git-lfs/releases)。
-        
+      
     - 依据源码构建：[https://github.com/git-lfs/git-lfs](https://github.com/git-lfs/git-lfs)。
-        
-- 安装：如果您选择使用二进制包下载后安装，直接执行解压后的`./install.sh`脚本即可，这个脚本会做两件事情：
     
+- 安装：如果您选择使用二进制包下载后安装，直接执行解压后的`./install.sh`脚本即可，这个脚本会做两件事情：
+  
     - 在$PATH中安装Git LFS的二进制可执行文件。
-        
+      
     - 执行`git lfs install`命令，让当前环境支持全局的LFS配置。
     - ```shell
         # 让仓库支持LFS
@@ -380,7 +399,8 @@ Git LFS为了解决大文件托管的效率问题，提供了五大特性：
         Git LFS initialized.
         ```
 
-## 3.2 配置Git LFS
+## 4 配置Git LFS
+
 为了将以示例`.bigfile`后缀结尾的文件使用Git LFS进行存储，需要执行track命令建立追踪：
 
 ```bash
@@ -396,14 +416,15 @@ Tracking "*.bigfile"
     Listing tracked patterns
         *.bigfile (.gitattributes)
     Listing excluded patterns
-    ```
-    
+```
+
 2.track 命令实际上是修改了仓库中的`.gitattributes`文件，将该文件add添加到暂存区。
 ```bash
     $git add .gitattributes 
-    ```
-    
+```
+
 3.可以通过以下命令查看文件相关变动：
+
 ```Shell
     $git diff --cached
      diff --git a/.gitattributes b/.gitattributes
@@ -413,11 +434,68 @@ Tracking "*.bigfile"
      +++ b/.gitattributes
      @@ -0,0 +1 @@
      +*.bigfile filter=lfs diff=lfs merge=lfs -text
-    ```
+```
 现在即可像往常一样，直接git add然后commit了。
+
+## 5 如何撤回提交了的文件
+
+### 5.1 如果只是想不再追踪这个文件（保留以前存在的历史）
+
+适合：
+
+- `.env`、`config.yml`
+- 本地配置文件
+- 不想再提交，但**历史里可以有**
+
+1、删除记录了
+
+```shell
+git rm --cached [文件路径]
+```
+
+2、然后加到`.gitignore`
+
+3、提交一次即可
+
+```shell
+git commit -m "stop tracking file"
+```
+
+
+
+### 5.2 从git历史中彻底抹掉这个文件（危险操作）
+
+适合：
+
+- **误提交密钥 / Token / 密码**
+- 法律 / 安全原因
+- 不想让任何人看到历史内容
+
+1、安装(以前安装过就不用安装了)
+
+```shell
+pip install git-filter-repo
+```
+
+2、删除历史中文件
+
+```shell
+git filter-repo --path path/to/file --invert-paths
+```
+
+3、强制推送
+
+```shell
+git push origin --force --all
+git push origin --force --tags
+```
+
+
+
 
 
 ## 踩坑
+
 ### 如果遇到大文件想要删除，或者想删除所有commit中的指定文件
 
 [Git无法上传删除 Commit里面有大文件_git 删除commit的大文件-CSDN博客](https://blog.csdn.net/LoveFHM/article/details/131563696)
