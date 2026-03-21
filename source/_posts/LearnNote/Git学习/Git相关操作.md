@@ -492,7 +492,25 @@ git push origin --force --tags
 
 
 
+## 基于github的review code技巧
 
+其实有一个本地review code的一个技巧，其实你可以直接通过git指令把对应的代码给拉下来进行review code，可以使用以下指令：
+
+```git
+git fetch pull/[pr编号]/head:pr-[pr编号]
+```
+
+例如：
+
+![PixPin_2026-03-20_18-21-54](./Git相关操作/images/PixPin_2026-03-20_18-21-54.jpg)
+
+那我们可以使用：
+
+```git
+git fetch pull/65/head:pr-65
+```
+
+这样我们本地就会出来一个新分支`pr-65`,这样就可以直接通过merge指令进行合并分支解决冲突。当我们成功合并分支后，远程的pr状态也会变成`pull request successfully merged and closed`。
 
 ## 踩坑
 
