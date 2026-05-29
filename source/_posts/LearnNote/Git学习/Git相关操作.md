@@ -167,6 +167,26 @@ git checkout -- 文件名称
 
 
 
+### 安全回调已推送版本（git revert）
+
+适用场景：代码已push，需要撤销中间某些提交并生成新记录。
+
+* 撤销最近的3次提交：
+
+```git
+git revert HEAD~3.HEAD
+```
+
+* 反做多个不连续的提交：
+
+```git
+git revert <commit1_id> <commit2_id>
+```
+
+
+
+
+
 ### SSH绑定远程仓库
 
 第一步：
@@ -497,7 +517,7 @@ git push origin --force --tags
 其实有一个本地review code的一个技巧，其实你可以直接通过git指令把对应的代码给拉下来进行review code，可以使用以下指令：
 
 ```git
-git fetch pull/[pr编号]/head:pr-[pr编号]
+git fetch origin pull/[pr编号]/head:pr-[pr编号]
 ```
 
 例如：
@@ -507,7 +527,7 @@ git fetch pull/[pr编号]/head:pr-[pr编号]
 那我们可以使用：
 
 ```git
-git fetch pull/65/head:pr-65
+git fetch origin pull/65/head:pr-65
 ```
 
 这样我们本地就会出来一个新分支`pr-65`,这样就可以直接通过merge指令进行合并分支解决冲突。当我们成功合并分支后，远程的pr状态也会变成`pull request successfully merged and closed`。
