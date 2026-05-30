@@ -1,3 +1,17 @@
+---
+title: 什么是Fail-safe
+date: 2026-02-21 13:58:49
+author: 长白崎
+categories:
+  - "AI"
+    "自动驾驶"
+tags:
+  - "AI"
+    "自动驾驶"
+---
+
+
+
 # 什么是Fail-safe
 
 ---

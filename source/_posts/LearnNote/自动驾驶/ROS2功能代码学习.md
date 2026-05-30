@@ -1,6 +1,16 @@
+---
+title: ROS2功能代码学习
+date: 2025-11-20 17:58:49
+author: 长白崎
+categories:
+  - "AI"
+    "ROS"
+tags:
+  - "AI"
+    "ROS"
+---
 
-
-
+# ROS2功能代码学习
 
 ## 节点篇
 

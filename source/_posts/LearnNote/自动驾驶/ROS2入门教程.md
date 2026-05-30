@@ -1,3 +1,17 @@
+---
+title: ROS2入门教程笔记
+date: 2025-08-21 09:28:49
+author: 长白崎
+categories:
+  - "AI"
+    "ROS"
+tags:
+  - "AI"
+    "ROS"
+---
+
+
+
 # ROS2入门教程笔记
 
 ## 1. ROS2安装与配置

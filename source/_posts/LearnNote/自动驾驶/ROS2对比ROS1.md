@@ -1,3 +1,17 @@
+---
+title: ROS2对比ROS1
+date: 2026-01-20 17:58:49
+author: 长白崎
+categories:
+  - "AI"
+    "ROS"
+tags:
+  - "AI"
+    "ROS"
+---
+
+
+
 # ROS2对比ROS1
 
 ---
